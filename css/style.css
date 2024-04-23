@@ -1,0 +1,368 @@
+/* Mobile View First */
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Universal Font Color Setup */
+
+* {
+    color:#ddd;
+}
+
+
+/* Body Section */
+body {
+    background-image: url('../images/supernatural_background.png');
+    background-repeat: repeat;
+    margin: 10px;
+    padding: 10px;
+}
+
+body .container {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 2fr) 1fr;
+    row-gap: 30px;
+    opacity: 90%;
+}
+
+/* Skip to Main Content Section */
+.skip a {
+    position: absolute;
+    top: -40px;
+    z-index: 1;
+    color: black;
+}
+
+.skip a:focus {
+    position:absolute;
+    top: 0;
+    color: white;
+}
+
+/* Header Section*/
+header {
+    grid-column: 1 / -1;
+}
+
+nav {
+    background-color: rgba(0,0,0,0.9);
+    padding: 20px 0;
+    text-align: center;
+    font-family: "UnifrakturMaguntia",serif;
+}
+
+nav li{
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover{
+    color: red;
+}
+
+.current {
+    color:#FF7575;
+    text-transform: uppercase;
+    border: 3px solid red;
+}
+
+/* Main Section */
+main {
+    grid-column: 2 / span 4;
+}
+
+.slideshow-container {
+    grid-column: 2 / span 4;
+    width: 90%;
+    position: relative;
+    margin: auto;
+}
+
+.prev, .next {
+    background-color: rgb(255,255,255,0.2);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+/* Aside Section */
+
+aside {
+    font-family: "Poppins", serif;
+    grid-column: 1 / -1;
+    justify-self: center;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.card {
+    max-width: 300px;
+    height: 100%;
+    color: black;
+    font-size: 14px;
+}
+
+.contact {
+    border: none;
+    padding: 8px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card a {
+    color: black;
+    display: block;
+}
+
+.welcome {
+    grid-column: 1 / -1;
+    justify-content: center;
+    text-align: center;
+}
+
+input[type=email], textarea {
+    color:black;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type=submit] {
+    font-family: "Jersey 20", serif;
+    font-size: 20px;
+    width: 100%;
+    background-color: black;
+    color: red;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Footer Section */
+
+footer{
+    background-color: rgba(0,0,0,0.6);
+    color: rgb(153, 116, 116);
+    grid-column: 1 / -1;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+/* Font Set Section */
+h1 {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 20px 0;
+    text-align: center;
+
+    text-shadow: 0px -8px 10px #df4d4d, 0px 8px 10px #df4d4d;
+    font-variant: petite-caps;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1em;
+    padding-bottom: 0;
+
+}
+
+h2 {
+    font-family: "Jersey 20", serif;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: bold;
+    padding: 10px 0;
+    text-align: center;
+}
+
+p {
+    font-family: "Poppins",sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    padding: 10px 0;
+}
+
+h2 + ul{
+    font-family: "Poppins",sans-serif;
+    color: white;
+    font-size: 16px;
+    line-height: 1.2;
+    padding: 10px 0;
+    list-style-type: armenian;
+}
+
+/* Gallery Images Set Section */
+h1 + img {
+    width:100%;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+
+.gallery img {
+    margin: 0 auto;
+    padding: 5px;
+    width: 65%;
+    border: 3px double whitesmoke;
+    position: relative;
+    transition: 0.6s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+
+/*Tablet View */
+@media screen and (min-width:768px) {
+    body .container {
+        display: grid;
+        grid-template-columns: 200px auto;
+        grid-template-rows: 50px 100px 100px 80px auto 50px;
+        grid-gap: 30px;
+    }
+
+/* Header Section*/
+    header {
+        grid-row: 1 / 2;
+        grid-column: 1 / span all;
+    }
+    nav {
+        text-align: center;
+    }
+
+    nav li{
+        display: inline;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+/* Main Section*/
+    main {
+        grid-row: 2 / 6;
+        grid-column: 2 / 3;
+    }
+
+/* Aside Section*/
+    aside {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+        padding: 80px 0px;
+        margin: 0px 10px;
+    }
+
+
+/* Footer Section */
+    footer {
+        grid-row: 6 / 7;
+        grid-column: 1 / span all;
+    }
+
+/* Gallery Images Set Section */
+   .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .gallery img {
+        width: 45%;
+    }
+}
+
+/*Desktop View */
+@media screen and (min-width:1024px) {
+    body .container {
+        grid-template-columns: 10px auto 300px;
+    }
+
+/* Header Section*/
+    nav {
+        text-align: right;
+    }
+
+/* Main Section*/
+    main {
+        grid-column: 2 / 3;
+    }
+
+/* Aside Section*/
+    aside {
+        grid-column: 3 / 4;
+    }
+
+/* Gallery Section */
+
+    .gallery img {
+        width: 30%;
+    }
+}
